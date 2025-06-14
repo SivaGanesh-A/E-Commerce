@@ -180,12 +180,12 @@ const ProductGrid = ({ onAddToCart, onToggleWishlist, wishlistItems = [] }: Prod
   const hasActiveFilters = selectedCategory !== 'all' || priceRange !== 'all' || sortBy !== 'featured';
 
   return (
-    <section className="py-12 bg-gray-50">
+    <section className="py-12 bg-secondary">
       <div className="container mx-auto px-4">
         <div className="flex flex-col lg:flex-row gap-8">
           {/* Sidebar filters */}
           <div className={`lg:w-64 ${showFilters ? 'block' : 'hidden lg:block'}`}>
-            <div className="bg-white rounded-xl shadow-lg p-6 sticky top-4">
+            <div className="bg-card rounded-xl shadow-lg p-6 sticky top-4">
               <div className="flex items-center justify-between mb-6">
                 <h3 className="text-lg font-semibold text-gray-900">Filters</h3>
                 {hasActiveFilters && (
@@ -193,7 +193,7 @@ const ProductGrid = ({ onAddToCart, onToggleWishlist, wishlistItems = [] }: Prod
                     variant="ghost" 
                     size="sm" 
                     onClick={clearFilters}
-                    className="text-orange-600 hover:text-orange-700"
+                    className="text-primary hover:text-accent"
                   >
                     Clear All
                   </Button>
@@ -212,7 +212,7 @@ const ProductGrid = ({ onAddToCart, onToggleWishlist, wishlistItems = [] }: Prod
                         value={category}
                         checked={selectedCategory === category}
                         onChange={(e) => setSelectedCategory(e.target.value)}
-                        className="text-orange-500 focus:ring-orange-500"
+                        className="text-primary focus:ring-accent"
                       />
                       <span className="text-sm text-gray-700 capitalize">
                         {category === 'all' ? 'All Categories' : category}
@@ -234,7 +234,7 @@ const ProductGrid = ({ onAddToCart, onToggleWishlist, wishlistItems = [] }: Prod
                         value={range.value}
                         checked={priceRange === range.value}
                         onChange={(e) => setPriceRange(e.target.value)}
-                        className="text-orange-500 focus:ring-orange-500"
+                        className="text-accent focus:ring-primary"
                       />
                       <span className="text-sm text-gray-700">{range.label}</span>
                     </label>
@@ -294,7 +294,7 @@ const ProductGrid = ({ onAddToCart, onToggleWishlist, wishlistItems = [] }: Prod
 
                 {/* Sort dropdown */}
                 <Select value={sortBy} onValueChange={setSortBy}>
-                  <SelectTrigger className="w-48">
+                  <SelectTrigger className="w-48 bg-card">
                     <SelectValue placeholder="Sort by" />
                   </SelectTrigger>
                   <SelectContent>
