@@ -3,7 +3,7 @@ import ProductCard from './ProductCard';
 import { Button } from '@/components/ui/button';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 import { Badge } from '@/components/ui/badge';
-import { Filter, Grid, List, X } from 'lucide-react';
+import { Filter, Grid, List, Package, X } from 'lucide-react';
 import { Box } from '@/components/ui/box';
 
 interface Product {
@@ -328,7 +328,7 @@ const ProductGrid = ({ onAddToCart, onToggleWishlist, wishlistItems = [] }: Prod
             {filteredAndSortedProducts.length === 0 && (
               <div className="text-center py-12">
                 <div className="text-gray-500 mb-4">
-                  <Box className="h-16 w-16 mx-auto mb-4 opacity-50" />
+                  <Package className="h-16 w-16 mx-auto mb-4 opacity-50" />
                   <h3 className="text-lg font-medium text-gray-900 mb-2">No products found</h3>
                   <p className="text-sm">Try adjusting your filters to see more results.</p>
                 </div>
