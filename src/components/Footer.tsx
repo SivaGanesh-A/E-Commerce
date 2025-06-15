@@ -112,7 +112,7 @@ const Footer = () => {
                 </div>
                 <div className="flex items-center space-x-3">
                   <MapPin className="h-4 w-4 text-orange-400" />
-                  <span className="text-sm text-gray-300">New York, NY 10001</span>
+                  <span className="text-sm text-gray-300">New York, India </span>
                 </div>
               </div>
             </div>
@@ -147,7 +147,7 @@ const Footer = () => {
           <div className="flex flex-col md:flex-row justify-between items-center">
             <div className="flex flex-col md:flex-row items-center space-y-2 md:space-y-0 md:space-x-6">
               <p className="text-sm text-gray-400">
-                © 2024 ShopVerse. All rights reserved.
+                © 2025 ShopVerse. All rights reserved.
               </p>
               <div className="flex items-center space-x-4">
                 <img src="/placeholder.svg" alt="Visa" className="h-6 opacity-60" />
